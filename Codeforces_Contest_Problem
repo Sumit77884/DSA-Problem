@@ -1,0 +1,18 @@
+# 🧠 Codeforces: Perfect Root (Math / Logic)
+
+## 📌 Problem Overview
+The problem asks us to find $n$ distinct "perfect roots" for a given test case. A positive integer $x$ is defined as a perfect root if there exists an integer $y$ such that $\sqrt{y} = x$. We need to output $n$ distinct perfect roots in the range $1 \le x \le 10^9$.
+
+## 💡 The Catch (Intuition)
+At first glance, this problem appears to require computing squares or generating a specific sequence of numbers. The example outputs even provide random-looking numbers (like `2 102 43 1 21`) to throw you off.
+
+However, the core logic is hidden in basic algebra. The definition $\sqrt{y} = x$ can simply be rewritten as $y = x^2$. Since $x$ is guaranteed to be an integer, squaring it will **always** result in another integer $y$. 
+
+Therefore, **every single positive integer is a perfect root!**
+
+## 🚀 Solution Approach
+Because every positive integer satisfies the problem's condition, we can ignore complex mathematical calculations. The most optimal way to solve this is to simply run a loop and print the first $n$ positive integers (e.g., $1, 2, 3 \dots n$). 
+
+### Complexity
+*   **Time Complexity:** $O(n)$ per test case, as we simply loop $n$ times to print the numbers.
+*   **Space Complexity:** $O(1)$ auxiliary space, as no extra data structures are required.
